@@ -40,7 +40,7 @@ if (!empty($SESSION->saml2idp) && array_key_exists($SESSION->saml2idp, $saml2aut
 }
 
 $defaultspentityid = "$baseurl/auth/saml2/sp/metadata.php";
-
+$idp = $idpentity->entityid;
 $config[$saml2auth->spname] = [
     'saml:SP',
     'entityID' => !empty($saml2auth->config->spentityid) ? $saml2auth->config->spentityid : $defaultspentityid,
